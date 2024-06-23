@@ -6,17 +6,27 @@ const Footer2 = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <div className="xs:gap-8 grid grid-cols-4 gap-4 gap-y-8 py-8 md:py-12">
-        {columns.map(({ title, texts }, index) => (
+        {columns.map(({ title, texts, links }, index) => (
           <div
             key={`item-column-${index}`}
-            className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+            className="col-span-4 flex flex-col sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
           >
             <div className="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</div>
             {texts &&
               texts.map((text, index2) => (
-                <p key={`item-text-${index2}`} className="text-gray-600 dark:text-slate-400">
+                <p key={`item-text-${index2}`} className="mb-1 text-gray-600 dark:text-gray-400">
                   {text}
                 </p>
+              ))}
+            {links &&
+              links.map(({ label, href }, index2) => (
+                <a
+                  key={`item-link-${index2}`}
+                  className="duration-150 ease-in-out placeholder:transition hover:text-gray-700 hover:underline dark:text-gray-400"
+                  href={href}
+                >
+                  {label}
+                </a>
               ))}
           </div>
         ))}

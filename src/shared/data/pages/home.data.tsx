@@ -1,19 +1,22 @@
 import {
   IconArrowDown,
   IconArrowsRightLeft,
+  IconArrowRight,
   IconBrandLinkedin,
-  IconBrandTailwind,
+  IconClockHour5,
   IconBrandTwitter,
   IconBulb,
-  IconCheck,
+  IconPlaneDeparture,
   IconClock,
   IconComponents,
   IconDownload,
   IconListCheck,
   IconMail,
-  IconMapPin,
+  IconSend,
   IconPhoneCall,
-  IconRocket,
+  IconPencilCode,
+  IconTower,
+  IconHeadset,
 } from '@tabler/icons-react';
 import {
   CallToActionProps,
@@ -28,7 +31,7 @@ import {
   TeamProps,
   TestimonialsProps,
 } from '../../types';
-import heroImg from '~/assets/images/hero.jpg';
+import heroImg from '~/assets/images/hero.png';
 import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
@@ -39,33 +42,23 @@ import gasImg from '~/assets/images/gas.jpg';
 
 // Hero data on Home page *******************
 export const heroHome: HeroProps = {
-  title: (
-    <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
-    </>
-  ),
+  title: <>Welcome to IDvACC</>,
   subtitle: (
     <>
-      <span className="hidden md:inline">
+      <span className="md:inline">
         <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
+          IDvACC
         </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
-      </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
+        is a division of the VATSIM network. VATSIM Southeast Asia (IDVACC) is responsible for providing ATC services
+        for all Indonesian Airspace. <br />
+        We look forward to seeing you soon!
+      </span>
     </>
   ),
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
-    targetBlank: true,
-  },
-  callToAction2: {
-    text: 'Learn more',
-    href: '/',
+    text: 'Join us now',
+    href: '/join',
+    icon: IconArrowRight,
   },
   image: {
     src: heroImg,
@@ -104,77 +97,50 @@ export const socialProofHome: SocialProofProps = {
 // Features data on Home page *******************
 export const featuresHome: FeaturesProps = {
   id: 'features-on-home',
-  hasBackground: false,
+  hasBackground: true,
   columns: 3,
   header: {
-    title: (
-      <>
-        What you get with <span className="whitespace-nowrap">TailNext</span>
-      </>
-    ),
-    subtitle:
-      "Elevating Your Digital Presence: Discover the Synergies Unleashed in Our Platform's Core Strengths, from Seamless Integration to Open Collaboration.",
+    title: <>What we offer</>,
+    subtitle: '',
     tagline: 'Features',
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
+      title: 'Air Traffic Control',
       description:
-        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-      icon: IconBrandTailwind,
+        'We are always looking for new recruits in the Indonesia vACC. Apply under the Join Us section of the website.',
+      icon: IconTower,
+    },
+    {
+      title: 'VATSIM Indonesia vACC Discord',
+      description:
+        'Want to make friends and talk to staff and controllers? Join our Discord with the button below! Please set your Full Name and CID as shown on your VATSIM account as your Discord nickname when joining.',
+      icon: IconHeadset,
       callToAction: {
-        text: 'Discover now',
-        href: '/',
+        text: 'Join our Discord',
+        href: 'https://community.vatsim.net/',
       },
     },
     {
-      title: 'Ready-to-use Components',
+      title: 'Spend time flying Long Haul',
       description:
-        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-      icon: IconComponents,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+        'Yes, flying long distances is endless, but may we recommend some interesting destinations in Indonesia. there are Bali, Yogyakarta, and Labuhan Bajo, with beautiful sunsets and clear waters that surround the islands.',
+      icon: IconClockHour5,
     },
     {
-      title: 'Best Practices',
+      title: 'Pilot Info',
       description:
-        'By prioritizing maintainability and scalability through coding standards and design principles, your website stays robust and efficient.',
-      icon: IconListCheck,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+        'Are you flying in Indonesia for the first time? Check out our pilot center for details on specific Indonesia Procedures..',
+      icon: IconPlaneDeparture,
     },
     {
-      title: 'Excellent Page Speed',
+      title: 'Feedback',
       description:
-        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-      icon: IconRocket,
+        'Want to leave some feedback? Did one of our controllers blow you away or did they make you want to go away? Regardless we would love to hear your feedback. Please visit the VATSEA HQ, login with your CID and password and note the CID and position of the controller..',
+      icon: IconPencilCode,
       callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
-      description:
-        "Boost online visibility with our SEO-friendly website. Effective strategies and practices enhance your website's search engine ranking, making it easier for users to find your content.",
-      icon: IconArrowsRightLeft,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
-    },
-    {
-      title: 'Open to new ideas and contributions',
-      description:
-        'We welcome new ideas and contributions to our platform. Whether you have feature suggestions, want to contribute code, or share insights, our platform is open for collaboration.',
-      icon: IconBulb,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
+        text: 'VATSEA-HQ ATC Feedback Link',
+        href: 'https://hq.vat-sea.com/atc/feedback',
       },
     },
   ],
@@ -367,34 +333,41 @@ export const faqs2Home: FAQsProps = {
   hasBackground: false,
   header: {
     title: 'Frequently Asked Questions',
-    subtitle:
-      'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
-    tagline: 'FAQS',
+    subtitle: 'Common questions that we usually get asked about.',
+    tagline: 'FAQs',
   },
   items: [
     {
-      title: 'What do I need to start?',
-      description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+      title: 'How can I connect with other Indonesian vACC members?',
+      description: (
+        <>
+          Join our <a href="https://community.vatsim.net/" className="text-primary-600 underline">Discord</a> and meet like-minded enthusiasts, organize a group flight with other pilots, and get notified about our future events. Everyone is welcome!
+        </>
+      ),
     },
     {
-      title: 'How to install the NextJS + Tailwind CSS template?',
-      description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+      title: 'How do I become a local controller?',
+      description: (
+        <>
+          Ensure that your VATSIM account is registered under the APAC Region, VATSEA Division, and Indonesia vACC subdivision. You can check your profile at <a href="https://my.vatsim.net" className="text-primary-600 underline">my.vatsim.net</a>. Then visit the <a href="/join" className="text-primary-600 underline">Join Us</a> page and follow the instructions there.
+        </>
+      ),
     },
     {
-      title: "What's something that you completely don't understand?",
-      description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+      title: 'How do I become a visiting controller?',
+      description: (
+        <>
+          Indonesia vACC welcomes visitor controllers with an <b>S3 rating or higher</b>. Visit the <a href="/join" className="text-primary-600 underline">Join Us</a> page and follow the instructions there. Please note that local controller training is always prioritized, so your waiting time may vary, depending on instructor availability.
+        </>
+      ),
     },
     {
-      title: "What's an example of when you changed your mind?",
-      description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
-    },
-    {
-      title: 'What is something that you would really like to try again?',
-      description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
-    },
-    {
-      title: 'If you could only ask one question to each person you meet, what would that question be?',
-      description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+      title: 'Where can I get charts for Indonesia?',
+      description: (
+        <>
+          Charts are available for free at Indonesia from the <a href="https://aimindonesia.dephub.go.id/" className="text-primary-600 underline">Indonesia Aeronautical Information Services website</a>.
+        </>
+      ),
     },
   ],
 };
@@ -608,55 +581,23 @@ export const contactHome: ContactProps = {
   hasBackground: true,
   header: {
     title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
+    subtitle: 'How can we help you?',
     tagline: 'Contact',
   },
-  content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
   items: [
     {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
-      icon: IconMapPin,
+      title: 'Discord',
+      description: ['community.vatsim.net'],
+      icon: IconHeadset,
+      href: 'https://community.vatsim.net/',
     },
     {
-      title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
-      icon: IconPhoneCall,
-    },
-    {
-      title: 'Working hours',
-      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
-      icon: IconClock,
+      title: 'Helpdesk',
+      description: ['hq.vat-sea.com/support/list'],
+      icon: IconSend,
+      href: 'https://hq.vat-sea.com/support/list',
     },
   ],
-  form: {
-    title: 'Ready to Get Started?',
-    inputs: [
-      {
-        type: 'text',
-        name: 'name',
-        autocomplete: 'off',
-        placeholder: 'Your name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        autocomplete: 'on',
-        placeholder: 'Your email address',
-      },
-    ],
-    textarea: {
-      cols: 30,
-      rows: 5,
-      name: 'textarea',
-      placeholder: 'Write your message...',
-    },
-    btn: {
-      title: 'Send Message',
-      type: 'submit',
-    },
-  },
 };
 
 // CallToAction data *******************

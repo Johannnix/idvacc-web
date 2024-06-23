@@ -1,7 +1,8 @@
+import Image from 'next/image';
+import headerLogo from '~/assets/images/idvacc-logo.png';
+
 const Logo = () => (
-  <span className="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
-    TailNext
-  </span>
+    <Image src={headerLogo} alt="TailNext" width={210} height={40} />
 );
 
 export default Logo;

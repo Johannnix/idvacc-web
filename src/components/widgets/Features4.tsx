@@ -35,7 +35,7 @@ const Features4 = ({
         )}
       </div>
     )}
-    <ItemGrid
+    {/* <ItemGrid
       items={items}
       columns={columns}
       defaultColumns={4}
@@ -44,7 +44,7 @@ const Features4 = ({
       titleClass="text-lg font-semibold mb-2"
       descriptionClass="mt-0.5"
       iconClass="flex-shrink-0 mr-4 mt-1 w-6 h-6 text-primary-800 dark:text-primary-600"
-    />
+    /> */}
   </WidgetWrapper>
 );
 

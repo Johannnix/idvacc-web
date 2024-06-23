@@ -6,8 +6,8 @@ import ItemTeam from '../common/ItemTeam';
 const Team = ({ header, teams, id, hasBackground = false }: TeamProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
     {header && <Headline header={header} titleClass="text-2xl sm:text-3xl" />}
-    <div className="flex items-stretch justify-center">
-      <div className="grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+    <div className="flex items-stretch">
+      <div className="dark:text-white w-full">
         {teams.map(({ name, occupation, image, items }, index) => (
           <div key={`item-team-two-${index}`} className="p-2">
             <ItemTeam

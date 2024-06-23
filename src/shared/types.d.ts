@@ -110,7 +110,7 @@ type Image = {
 
 type Item = {
   title?: string | boolean | number;
-  description?: string | Array<string>;
+  description?: ReactNode;
   href?: string;
   form?: SmallForm;
   icon?: Icon;
@@ -245,7 +245,11 @@ type HeroProps = {
 
 type FAQsProps = Widget & {
   header?: Header;
-  items?: Array<Item>;
+  items?: Array<{
+    title: string;
+    description: ReactNode;
+  }>;
+
   columns?: number;
   tabs?: Array<Tab>;
   callToAction?: CallToActionType;
@@ -297,8 +301,21 @@ type StepsProps = Widget & {
 };
 
 type TeamProps = Widget & {
+  title?: string | ReactElement;
+  subtitle?: string | ReactElement;
+  tagline?: string;
   header?: Header;
   teams: Array<Team>;
+};
+
+type EventProps = Widget & {
+  id?: string;
+  hasBackground: boolean;
+};
+
+type RosterProps = Widget & {
+  id?: string;
+  hasBackground: boolean;
 };
 
 type AnnouncementProps = {
@@ -339,7 +356,6 @@ type ContactProps = Widget & {
   header?: Header;
   content?: string;
   items?: Array<Item>;
-  form: FormProps;
 };
 
 type FooterProps = {
@@ -354,7 +370,6 @@ type FooterProps = {
 type HeaderProps = {
   links?: Array<MenuLink>;
   actions?: Array<CallToActionType>;
-  // actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;

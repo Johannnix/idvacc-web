@@ -1,10 +1,10 @@
 module.exports.SITE = {
-  name: 'TailNext',
+  name: 'Indonesia vACC',
 
   origin: 'https://tailnext.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'TailNext — Your website with Next.js + Tailwind CSS',
-  description: 'TailNext is a free and ready to start template to make your website using Next.js and Tailwind CSS.',
+  title: 'Home — Indonesia vACC',
+  description: 'Indonesia vACC, a division of VATSIM Southeast Asia Region.',
 };

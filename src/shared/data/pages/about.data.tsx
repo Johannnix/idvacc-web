@@ -6,9 +6,10 @@ import {
   StatsProps,
   StepsProps,
   TeamProps,
+  EventProps,
+  RosterProps,
   TestimonialsProps,
 } from '~/shared/types';
-import hero2Img from '~/assets/images/hero2.jpg';
 import {
   IconAdjustments,
   IconAward,
@@ -38,23 +39,266 @@ import {
 
 // Hero2 data on About page *******************
 export const hero2About: HeroProps = {
-  title: 'Great companies are made by great people',
+  title: 'The official vACC of Indonesia on VATSIM!',
   subtitle:
-    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui.',
-  tagline: 'About Us Demo Page',
-  callToAction: {
-    text: 'View jobs',
-    href: 'https://www.linkedin.com/',
-    targetBlank: true,
-  },
-  callToAction2: {
-    text: 'Contact us',
-    href: '/contact',
-  },
-  image: {
-    src: hero2Img,
-    alt: 'Hero TailNext',
-  },
+    'We have a vast history, and over the past years have evolved massively to include many new and exciting features in VATSIM Indonesia that we love to share with the community.',
+  tagline: 'About Us',
+  // callToAction: {
+  //   text: 'View jobs',
+  //   href: 'https://www.linkedin.com/',
+  //   targetBlank: true,
+  // },
+  // callToAction2: {
+  //   text: 'Contact us',
+  //   href: '/contact',
+  // },
+  // image: {
+  //   src: hero2Img,
+  //   alt: 'Hero TailNext',
+  // },
+};
+
+export const ourTeam: TeamProps = {
+  title: 'Management Team',
+  subtitle: 'Meet our staff team who manage day to day operations of the vACC.',
+  tagline: 'Our Team',
+  teams: [
+    {
+      name: 'Gery Kurniawan',
+      occupation: 'Director | ACCIDN1',
+      image: {
+        src: "",
+        alt: 'Gery Kurniawan',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Daniel Surya',
+      occupation: 'Training Director | ACCIDN3',
+      image: {
+        src: "",
+        alt: 'Daniel Surya',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Jonathan Handoyo',
+      occupation: 'Events Director | ACCIDN4',
+      image: {
+        src: "",
+        alt: 'Jonathan Handoyo',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Muhammad Fauzy',
+      occupation: 'Facilities Director | ACCIDN5',
+      image: {
+        src: "",
+        alt: 'Muhammad Fauzy',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Syarif Rahman',
+      occupation: 'Public Relations Manager | ACCIDN6',
+      image: {
+        src: "",
+        alt: 'Syarif Rahman',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    },
+    {
+      name: 'Johan Winarto',
+      occupation: 'Webmaster | ACCIDN7',
+      image: {
+        src: "",
+        alt: 'Johan Winarto',
+      },
+      items: [
+        {
+          title: 'Contact by email',
+          icon: IconMail,
+          href: '#',
+        },
+      ],
+    }
+  ],
+  // callToAction: {
+  //   text: 'View jobs',
+  //   href: 'https://www.linkedin.com/',
+  //   targetBlank: true,
+  // },
+  // callToAction2: {
+  //   text: 'Contact us',
+  //   href: '/contact',
+  // },
+  // image: {
+  //   src: hero2Img,
+  //   alt: 'Hero TailNext',
+  // },
+};
+
+export const event: EventProps = {
+  // title: 'Upcoming Events',
+  // subtitle: 'All dates and times are in your local browser time.',
+  // tagline: 'Events',
+  id: 'team-on-about',
+  hasBackground: false,
+  // teams: [
+  //   {
+  //     name: 'Gery Kurniawan',
+  //     occupation: 'Director | ACCIDN1',
+  //     image: {
+  //       src: "",
+  //       alt: 'Gery Kurniawan',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Daniel Surya',
+  //     occupation: 'Training Director | ACCIDN3',
+  //     image: {
+  //       src: "",
+  //       alt: 'Daniel Surya',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Jonathan Handoyo',
+  //     occupation: 'Events Director | ACCIDN4',
+  //     image: {
+  //       src: "",
+  //       alt: 'Jonathan Handoyo',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Muhammad Fauzy',
+  //     occupation: 'Facilities Director | ACCIDN5',
+  //     image: {
+  //       src: "",
+  //       alt: 'Muhammad Fauzy',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Syarif Rahman',
+  //     occupation: 'Public Relations Manager | ACCIDN6',
+  //     image: {
+  //       src: "",
+  //       alt: 'Syarif Rahman',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Johan Winarto',
+  //     occupation: 'Webmaster | ACCIDN7',
+  //     image: {
+  //       src: "",
+  //       alt: 'Johan Winarto',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   }
+  // ],
+  // callToAction: {
+  //   text: 'View jobs',
+  //   href: 'https://www.linkedin.com/',
+  //   targetBlank: true,
+  // },
+  // callToAction2: {
+  //   text: 'Contact us',
+  //   href: '/contact',
+  // },
+  // image: {
+  //   src: hero2Img,
+  //   alt: 'Hero TailNext',
+  // },
+};
+
+export const rosterAbout: HeroProps = {
+  title: 'Local Controller Roster',
+  // subtitle: 'Meet our staff team who manage day to day operations of the vACC.',
+  tagline: 'Controller Roster',
+  // callToAction: {
+  //   text: 'View jobs',
+  //   href: 'https://www.linkedin.com/',
+  //   targetBlank: true,
+  // },
+  // callToAction2: {
+  //   text: 'Contact us',
+  //   href: '/contact',
+  // },
+  // image: {
+  //   src: hero2Img,
+  //   alt: 'Hero TailNext',
+  // },
 };
 
 // Stats data on About page *******************
@@ -81,25 +325,24 @@ export const statsAbout: StatsProps = {
   ],
 };
 
-// FeaturesFour data on About page *******************
 export const featuresFourAbout: FeaturesProps = {
   id: 'features-four-on-about',
-  hasBackground: false,
+  hasBackground: true,
   header: {
     title: 'Our mission',
     subtitle:
-      'Quisque laoreet nisi et lectus consectetur, at placerat libero dictum. Donec sed hendrerit turpis. Nunc vel nibh blandit, hendrerit turpis non, mattis magna. Duis feugiat dui mi, eget iaculis ligula gravida congue. Nam quis mauris id eros imperdiet imperdiet. In et dolor non nisi vestibulum rhoncus nec eget dolor.',
-    tagline: 'Mission and Values',
+      'We want to showcase and share our love of Aviation with everyone from Indonesia and even the rest of the world!',
+    tagline: 'Mission and Vision',
   },
 };
 
-// FeaturesFour data on About page (Two) *******************
 export const featuresFourAboutTwo: FeaturesProps = {
   id: 'features-four-on-about-two',
-  hasBackground: false,
+  hasBackground: true,
   header: {
-    title: 'Our values',
-    subtitle: 'Etiam tellus tortor, mattis id mauris et, lobortis ullamcorper nunc.',
+    title: 'Our Vision',
+    subtitle:
+      'We want to inspire the young and old to get involved in aviation. If that means them becoming a pilot or an air traffic controller, we want to inspire you to do whatever you want!',
   },
   isAfterContent: true,
   columns: 2,
@@ -265,32 +508,22 @@ export const featuresAbout: FeaturesProps = {
 // Team data on About page *******************
 export const teamAbout: TeamProps = {
   id: 'team-on-about',
-  hasBackground: false,
-  header: {
-    title: 'Meet our executive team',
-    subtitle:
-      'Proin quis neque vehicula, sagittis felis ut, scelerisque mi. Nullam consequat, erat eu luctus sodales, ipsum tellus facilisis magna, eu condimentum lectus.',
-    tagline: 'team',
-  },
+  hasBackground: true,
+  // header: {
+  //   title: 'Meet our executive team',
+  //   subtitle:
+  //     'Proin quis neque vehicula, sagittis felis ut, scelerisque mi. Nullam consequat, erat eu luctus sodales, ipsum tellus facilisis magna, eu condimentum lectus.',
+  //   tagline: 'team',
+  // },
   teams: [
     {
-      name: 'John Peterson',
-      occupation: 'Founder & CEO',
+      name: 'Gery Kurniawan',
+      occupation: 'Director | ACCIDN1',
       image: {
-        src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'John Peterson',
+        src: "",
+        alt: 'Gery Kurniawan',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -299,23 +532,13 @@ export const teamAbout: TeamProps = {
       ],
     },
     {
-      name: 'Sarah Mitchell',
-      occupation: 'Chief Creative Officer',
+      name: 'Daniel Surya',
+      occupation: 'Training Director | ACCIDN3',
       image: {
-        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Sarah Mitchell',
+        src: "",
+        alt: 'Daniel Surya',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -324,23 +547,13 @@ export const teamAbout: TeamProps = {
       ],
     },
     {
-      name: 'David Foster',
-      occupation: 'Chief Technology Officer',
+      name: 'Jonathan Handoyo',
+      occupation: 'Events Director | ACCIDN4',
       image: {
-        src: 'https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=250&q=80',
-        alt: 'David Foster',
+        src: "",
+        alt: 'Jonathan Handoyo',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -349,23 +562,13 @@ export const teamAbout: TeamProps = {
       ],
     },
     {
-      name: 'Mary Smith',
-      occupation: 'Chief Marketing Office',
+      name: 'Muhammad Fauzy',
+      occupation: 'Facilities Director | ACCIDN5',
       image: {
-        src: 'https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Mary Smith',
+        src: "",
+        alt: 'Muhammad Fauzy',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -374,23 +577,13 @@ export const teamAbout: TeamProps = {
       ],
     },
     {
-      name: 'Michael Turner',
-      occupation: 'Chief Financial Officer',
+      name: 'Syarif Rahman',
+      occupation: 'Public Relations Manager | ACCIDN6',
       image: {
-        src: 'https://images.unsplash.com/photo-1619380061814-58f03707f082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Michael Turner',
+        src: "",
+        alt: 'Syarif Rahman',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -399,23 +592,13 @@ export const teamAbout: TeamProps = {
       ],
     },
     {
-      name: 'Laura Adams',
-      occupation: 'Chief Customer Relations Officer',
+      name: 'Johan Winarto',
+      occupation: 'Webmaster | ACCIDN7',
       image: {
-        src: 'https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Laura Adams',
+        src: "",
+        alt: 'Johan Winarto',
       },
       items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
         {
           title: 'Contact by email',
           icon: IconMail,
@@ -423,57 +606,210 @@ export const teamAbout: TeamProps = {
         },
       ],
     },
-    {
-      name: 'Robert Williams',
-      occupation: 'Chief Operations Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Robert Williams',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Emily Davis',
-      occupation: 'Chief Strategy Officer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
-        alt: 'Emily Davis',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
+    // {
+    //   name: 'Robert Williams',
+    //   occupation: 'Chief Operations Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Robert Williams',
+    //   },
+    //   // items: [
+    //   //   {
+    //   //     title: 'Know more on Twitter',
+    //   //     icon: IconBrandTwitter,
+    //   //     href: '#',
+    //   //   },
+    //   //   {
+    //   //     title: 'Know more on Linkedin',
+    //   //     icon: IconBrandLinkedin,
+    //   //     href: '#',
+    //   //   },
+    //   //   {
+    //   //     title: 'Contact by email',
+    //   //     icon: IconMail,
+    //   //     href: '#',
+    //   //   },
+    //   // ],
+    // },
+    // {
+    //   name: 'Emily Davis',
+    //   occupation: 'Chief Strategy Officer',
+    //   image: {
+    //     src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    //     alt: 'Emily Davis',
+    //   },
+    //   // items: [
+    //   //   {
+    //   //     title: 'Know more on Twitter',
+    //   //     icon: IconBrandTwitter,
+    //   //     href: '#',
+    //   //   },
+    //   //   {
+    //   //     title: 'Know more on Linkedin',
+    //   //     icon: IconBrandLinkedin,
+    //   //     href: '#',
+    //   //   },
+    //   //   {
+    //   //     title: 'Contact by email',
+    //   //     icon: IconMail,
+    //   //     href: '#',
+    //   //   },
+    //   // ],
+    // },
   ],
+};
+
+export const rosterAbout2: RosterProps = {
+  id: 'team-on-about',
+  hasBackground: false,
+  // header: {
+  //   title: 'Meet our executive team',
+  //   subtitle:
+  //     'Proin quis neque vehicula, sagittis felis ut, scelerisque mi. Nullam consequat, erat eu luctus sodales, ipsum tellus facilisis magna, eu condimentum lectus.',
+  //   tagline: 'team',
+  // },
+  // teams: [
+  //   {
+  //     name: 'Gery Kurniawan',
+  //     occupation: 'Director | ACCIDN1',
+  //     image: {
+  //       src: gery,
+  //       alt: 'Gery Kurniawan',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Daniel Surya',
+  //     occupation: 'Training Director | ACCIDN3',
+  //     image: {
+  //       src: daniel,
+  //       alt: 'Daniel Surya',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Jonathan Handoyo',
+  //     occupation: 'Events Director | ACCIDN4',
+  //     image: {
+  //       src: jonathan,
+  //       alt: 'Jonathan Handoyo',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Muhammad Fauzy',
+  //     occupation: 'Facilities Director | ACCIDN5',
+  //     image: {
+  //       src: fauzy,
+  //       alt: 'Muhammad Fauzy',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Syarif Rahman',
+  //     occupation: 'Public Relations Manager | ACCIDN6',
+  //     image: {
+  //       src: syarif,
+  //       alt: 'Syarif Rahman',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Johan Winarto',
+  //     occupation: 'Webmaster | ACCIDN7',
+  //     image: {
+  //       src: johan,
+  //       alt: 'Johan Winarto',
+  //     },
+  //     items: [
+  //       {
+  //         title: 'Contact by email',
+  //         icon: IconMail,
+  //         href: '#',
+  //       },
+  //     ],
+  //   },
+  //   // {
+  //   //   name: 'Robert Williams',
+  //   //   occupation: 'Chief Operations Officer',
+  //   //   image: {
+  //   //     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+  //   //     alt: 'Robert Williams',
+  //   //   },
+  //   //   // items: [
+  //   //   //   {
+  //   //   //     title: 'Know more on Twitter',
+  //   //   //     icon: IconBrandTwitter,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   //   {
+  //   //   //     title: 'Know more on Linkedin',
+  //   //   //     icon: IconBrandLinkedin,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   //   {
+  //   //   //     title: 'Contact by email',
+  //   //   //     icon: IconMail,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   // ],
+  //   // },
+  //   // {
+  //   //   name: 'Emily Davis',
+  //   //   occupation: 'Chief Strategy Officer',
+  //   //   image: {
+  //   //     src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+  //   //     alt: 'Emily Davis',
+  //   //   },
+  //   //   // items: [
+  //   //   //   {
+  //   //   //     title: 'Know more on Twitter',
+  //   //   //     icon: IconBrandTwitter,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   //   {
+  //   //   //     title: 'Know more on Linkedin',
+  //   //   //     icon: IconBrandLinkedin,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   //   {
+  //   //   //     title: 'Contact by email',
+  //   //   //     icon: IconMail,
+  //   //   //     href: '#',
+  //   //   //   },
+  //   //   // ],
+  //   // },
+  // ],
 };
 
 // Testimonial2 data on About page *******************
@@ -614,39 +950,4 @@ export const contactAbout: ContactProps = {
       icon: IconClock,
     },
   ],
-  form: {
-    inputs: [
-      {
-        type: 'text',
-        label: 'Name',
-        name: 'name',
-        placeholder: 'Introduce your name',
-        autocomplete: 'off',
-      },
-      {
-        type: 'email',
-        label: 'Email address',
-        name: 'email',
-        placeholder: 'Introduce your email address',
-        autocomplete: 'on',
-      },
-    ],
-    textarea: {
-      cols: 30,
-      rows: 5,
-      label: 'How can we help you?',
-      name: 'textarea',
-      placeholder: 'Write your message...',
-    },
-    checkboxes: [
-      {
-        label: 'Have you read our privacy policy?',
-        value: '',
-      },
-    ],
-    btn: {
-      title: 'Contact us',
-      type: 'submit',
-    },
-  },
 };
