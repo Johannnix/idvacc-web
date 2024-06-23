@@ -31,10 +31,10 @@ export const heroServices: HeroProps = {
     href: 'https://github.com/onwidget/tailnext',
     targetBlank: true,
   },
-  image: {
-    src: heroImg,
-    alt: 'Hero TailNext',
-  },
+  // image: {
+  //   src: heroImg,
+  //   alt: 'Hero TailNext',
+  // },
 };
 
 // Feature2 data on Services page *******************
@@ -256,22 +256,22 @@ export const faqsServices: FAQsProps = {
     {
       title: 'Can I customize the templates to match my brand?',
       description: `Ut accumsan, massa at sagittis maximus, libero justo rhoncus metus, quis finibus neque justo quis nisi. Suspendisse sed sapien et justo iaculis faucibus.`,
-      icon: IconChevronsRight,
+      // icon: IconChevronsRight,
     },
     {
       title: 'What if I need help customizing the template?',
       description: `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent imperdiet ultricies ex consequat egestas.`,
-      icon: IconChevronsRight,
+      // icon: IconChevronsRight,
     },
     {
       title: 'Are there setup guides available?',
       description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
-      icon: IconChevronsRight,
+      // icon: IconChevronsRight,
     },
     {
       title: 'Can I hire you for template customization?',
       description: `Phasellus est quam, mollis tincidunt dictum pulvinar, tempor vel justo. Mauris eu lobortis leo. Proin pretium arcu lectus, a mattis nisi fermentum quis.`,
-      icon: IconChevronsRight,
+      // icon: IconChevronsRight,
     },
   ],
 };

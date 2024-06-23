@@ -30,7 +30,7 @@ import {
 } from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
-  title: SITE.title,
+  title: `Roster`,
 };
 
 export default function Page() {

@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Component from '~/components/widgets/Announcement';
+// import Component from '~/components/widgets/Announcement';
 import { announcementData as mockData } from '~/shared/data/global.data';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Widgets/Announcement',
-  component: Component,
+  // component: Component,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
@@ -15,7 +15,8 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {},
-} satisfies Meta<typeof Component>;
+}
+// satisfies Meta<typeof Component>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
