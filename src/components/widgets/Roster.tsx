@@ -10,7 +10,7 @@ const Roster = ({ id, hasBackground = false }: RosterProps) => (
             <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
               Controller Roster
             </p>
-            <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
+            <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl ">
               Local Controller Roster
             </h1>
           </div>

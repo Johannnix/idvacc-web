@@ -5,7 +5,7 @@ const Footer2 = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
-      <div className="xs:gap-8 grid grid-cols-4 gap-4 gap-y-8 py-8 md:py-12">
+      <div className="xs:gap-8 grid grid-cols-4 gap-4 gap-y-8 py-8 md:py-12 text-sm">
         {columns.map(({ title, texts, links }, index) => (
           <div
             key={`item-column-${index}`}
@@ -48,7 +48,7 @@ const Footer2 = () => {
         </div>
       </div>
       <div className="text-muted py-6 text-sm text-gray-700 dark:text-slate-400 md:flex md:items-center md:justify-between md:py-8">
-        <ul className="mb-4 flex pl-2 rtl:pl-0 rtl:pr-2 md:order-1 md:mb-0">
+        <ul className="mb-4 flex pl-2 rtl:pl-0 rtl:pr-2 md:order-1 md:mb-0 text-xs">
           {links &&
             links.map(({ label, href }, index) => (
               <li key={`item-link-${index}`}>

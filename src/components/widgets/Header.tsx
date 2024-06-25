@@ -91,7 +91,7 @@ const Header = () => {
         >
           <ul
             ref={ref}
-            className="flex w-full flex-col mt-2 mb-36 md:m-0 text-base md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
+            className="flex w-full flex-col mt-2 mb-36 md:m-0 text-base md:w-auto md:flex-row md:self-center md:pt-0 md:text-xs"
           >
             {links &&
               links.map(({ label, href, icon: Icon, links }, index) => (
