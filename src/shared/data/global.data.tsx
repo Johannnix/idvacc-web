@@ -55,7 +55,7 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'Privacy Policy',
-          href: '/privacyy',
+          href: '/privacy',
         },
       ],
     },
@@ -73,11 +73,11 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'Training Syllabus',
-          href: '/training/syllabus',
+          href: '/syllabus',
         },
         {
           label: 'Training Manuals',
-          href: '/training/manuals',
+          href: '/manuals',
         },
         {
           label: 'Standard Operating Procedures',
@@ -107,7 +107,7 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'Airport Charts',
-          href: '/charts/airport',
+          href: '/airport',
         },
         {
           label: 'Video Tutorials',
@@ -286,11 +286,11 @@ export const footerData2: FooterProps = {
   links: [
     {
       label: 'Terms & Conditions',
-      href: '/termss',
+      href: '/terms',
     },
     {
       label: 'Privacy Policy',
-      href: '/privacyy',
+      href: '/privacy',
     },
   ],
   columns: [

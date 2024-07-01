@@ -7,7 +7,7 @@ import headerLogo from '~/assets/images/404.png';
 const App = () => {
   useEffect(() => {
     setTimeout(() => {
-      window.location.replace('https://idvacc-web.vercel.app');
+      window.location.replace('https://idvacc.id');
     }, 6000);
   }, []);
 
