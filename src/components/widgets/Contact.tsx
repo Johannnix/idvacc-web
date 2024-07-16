@@ -5,7 +5,7 @@ import WidgetWrapper from '../common/WidgetWrapper';
 
 const Contact = ({ header, content, items, id, hasBackground = false }: ContactProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="max-w-6xl">
-    {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
+    {header && <Headline header={header} titleClass="text-3xl sm:text-3xl" />}
     <div className="flex items-stretch justify-center">
       <div className={`grid ${!content && !items ? 'md:grid-cols-1' : 'md:grid-cols-1'}`}>
         <div className="h-full pr-6">
@@ -18,7 +18,7 @@ const Contact = ({ header, content, items, id, hasBackground = false }: ContactP
                     {Icon && <Icon className="h-6 w-6" />}
                   </div>
                   <div className="ml-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h3>
+                    <h3 className="mb-1 text-lg font-medium leading-6 text-gray-900 dark:text-white">{title}</h3>
                     {Array.isArray(description) ? (
                       <ul className="pl-0">
                         {description.map((desc, idx) => (

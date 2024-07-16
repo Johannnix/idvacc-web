@@ -19,8 +19,8 @@ const ItemTeam = ({
       {/* <Image src={image.src} width={240} height={320} alt={image.alt} className={twMerge('', imageClass)} /> */}
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <h3 className={twMerge('', nameClass)}>{name}</h3>
-          <p className={twMerge('', occupationClass)}>{occupation}</p>
+          <h3 className="font-semibold text-lg">{name}</h3>
+          <p className="font-light">{occupation}</p>
         </div>
         <div className="flex justify-center items-center">
           <ul>

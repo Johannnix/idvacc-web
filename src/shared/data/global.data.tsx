@@ -290,11 +290,11 @@ export const footerData2: FooterProps = {
   links: [
     {
       label: 'Terms & Conditions',
-      href: '/termss',
+      href: '/terms',
     },
     {
       label: 'Privacy Policy',
-      href: '/privacyy',
+      href: '/privacy',
     },
   ],
   columns: [
