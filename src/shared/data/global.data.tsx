@@ -41,21 +41,21 @@ export const headerData: HeaderProps = {
           label: 'Events',
           href: '/events',
         },
-        {
-          label: 'Controller Roster',
-          href: '/roster',
-        },
-        {
-          label: 'Branding',
-          href: '/branding',
-        },
-        {
-          label: 'Partners',
-          href: '/partners',
-        },
+        // {
+        //   label: 'Controller Roster',
+        //   href: '/roster',
+        // },
+        // {
+        //   label: 'Branding',
+        //   href: '/branding',
+        // },
+        // {
+        //   label: 'Partners',
+        //   href: '/partners',
+        // },
         {
           label: 'Privacy Policy',
-          href: '/privacyy',
+          href: '/privacy',
         },
       ],
     },
@@ -67,30 +67,30 @@ export const headerData: HeaderProps = {
           label: 'Join Us',
           href: '/join',
         },
-        {
-          label: 'Facility General Policies',
-          href: '/fgp',
-        },
-        {
-          label: 'Training Syllabus',
-          href: '/training/syllabus',
-        },
-        {
-          label: 'Training Manuals',
-          href: '/training/manuals',
-        },
+        // {
+        //   label: 'Facility General Policies',
+        //   href: '/fgp',
+        // },
+        // {
+        //   label: 'Training Syllabus',
+        //   href: '/training/syllabus',
+        // },
+        // {
+        //   label: 'Training Manuals',
+        //   href: '/training/manuals',
+        // },
         {
           label: 'Standard Operating Procedures',
           href: '/sop',
         },
-        {
-          label: 'Letters of Agreement',
-          href: '/loa',
-        },
-        {
-          label: 'Downloads',
-          href: '/downloads',
-        },
+        // {
+        //   label: 'Letters of Agreement',
+        //   href: '/loa',
+        // },
+        // {
+        //   label: 'Downloads',
+        //   href: '/downloads',
+        // },
       ],
     },
     {
@@ -98,25 +98,29 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
+          label: "General Policy",
+          href: "generalpolicy"
+        },
+        {
           label: 'Weather',
           href: '/weather',
         },
-        {
-          label: 'Pre-Departure Clearance',
-          href: '/pdc',
-        },
-        {
-          label: 'Airport Charts',
-          href: '/charts/airport',
-        },
-        {
-          label: 'Video Tutorials',
-          href: '/videos',
-        },
-        {
-          label: 'WIII Gate Finder',
-          href: '/gatefinder',
-        },
+        // {
+        //   label: 'Pre-Departure Clearance',
+        //   href: '/pdc',
+        // },
+        // {
+        //   label: 'Airport Charts',
+        //   href: '/charts/airport',
+        // },
+        // {
+        //   label: 'Video Tutorials',
+        //   href: '/videos',
+        // },
+        // {
+        //   label: 'WIII Gate Finder',
+        //   href: '/gatefinder',
+        // },
       ],
     },
     {
@@ -268,7 +272,7 @@ export const footerData: FooterProps = {
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
   ],
   footNote: (
-    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
+    <div className="mr-4 text-sm rtl:mr-0 rtl:ml-4">
       <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(/johannnix.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       <span>
         Made by{' '}
@@ -344,7 +348,7 @@ export const footerData2: FooterProps = {
     { label: 'Discord', icon: IconBrandDiscord, href: '#' },
   ],
   footNote: (
-    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
+    <div className="mr-4 text-sm rtl:mr-0 rtl:ml-4">
       <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(/favicon.ico)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       <span>
         Made by{' '}
