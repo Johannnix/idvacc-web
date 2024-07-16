@@ -59,6 +59,7 @@ export const heroHome: HeroProps = {
     text: 'Join us now',
     href: 'https://community.vatsim.net/',
     icon: IconArrowRight,
+    targetBlank: true
   },
   image: {
     src: heroImg,
