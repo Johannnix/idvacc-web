@@ -109,11 +109,11 @@ export const ourTeam: TeamProps = {
       ],
     },
     {
-      name: 'Muhammad Fauzy',
+      name: 'Mohamad Fauzi',
       occupation: 'Facilities Director | ACCIDN5',
       image: {
         src: "",
-        alt: 'Muhammad Fauzy',
+        alt: 'Mohamad Fauzi',
       },
       items: [
         {

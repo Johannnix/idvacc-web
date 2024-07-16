@@ -57,7 +57,7 @@ export const heroHome: HeroProps = {
   ),
   callToAction: {
     text: 'Join us now',
-    href: '/join',
+    href: 'https://community.vatsim.net/',
     icon: IconArrowRight,
   },
   image: {
@@ -341,7 +341,7 @@ export const faqs2Home: FAQsProps = {
       title: 'How can I connect with other Indonesian vACC members?',
       description: (
         <>
-          Join our <a href="https://community.vatsim.net/" className="text-primary-600 underline">Discord</a> and meet like-minded enthusiasts, organize a group flight with other pilots, and get notified about our future events. Everyone is welcome!
+          Join our <a href="https://community.vatsim.net/" className="underline text-primary-600">Discord</a> and meet like-minded enthusiasts, organize a group flight with other pilots, and get notified about our future events. Everyone is welcome!
         </>
       ),
     },
@@ -349,7 +349,7 @@ export const faqs2Home: FAQsProps = {
       title: 'How do I become a local controller?',
       description: (
         <>
-          Ensure that your VATSIM account is registered under the APAC Region, VATSEA Division, and Indonesia vACC subdivision. You can check your profile at <a href="https://my.vatsim.net" className="text-primary-600 underline">my.vatsim.net</a>. Then visit the <a href="/join" className="text-primary-600 underline">Join Us</a> page and follow the instructions there.
+          Ensure that your VATSIM account is registered under the APAC Region, VATSEA Division, and Indonesia vACC subdivision. You can check your profile at <a href="https://my.vatsim.net" className="underline text-primary-600">my.vatsim.net</a>. Then visit the <a href="/join" className="underline text-primary-600">Join Us</a> page and follow the instructions there.
         </>
       ),
     },
@@ -357,7 +357,7 @@ export const faqs2Home: FAQsProps = {
       title: 'How do I become a visiting controller?',
       description: (
         <>
-          Indonesia vACC welcomes visitor controllers with an <b>S3 rating or higher</b>. Visit the <a href="/join" className="text-primary-600 underline">Join Us</a> page and follow the instructions there. Please note that local controller training is always prioritized, so your waiting time may vary, depending on instructor availability.
+          Indonesia vACC welcomes visitor controllers with an <b>S3 rating or higher</b>. Visit the <a href="/join" className="underline text-primary-600">Join Us</a> page and follow the instructions there. Please note that local controller training is always prioritized, so your waiting time may vary, depending on instructor availability.
         </>
       ),
     },
@@ -365,7 +365,7 @@ export const faqs2Home: FAQsProps = {
       title: 'Where can I get charts for Indonesia?',
       description: (
         <>
-          Charts are available for free at Indonesia from the <a href="https://aimindonesia.dephub.go.id/" className="text-primary-600 underline">Indonesia Aeronautical Information Services website</a>.
+          Charts are available for free at Indonesia from the <a href="https://aimindonesia.dephub.go.id/" className="underline text-primary-600">Indonesia Aeronautical Information Services website</a>.
         </>
       ),
     },
