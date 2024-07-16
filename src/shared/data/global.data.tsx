@@ -80,8 +80,8 @@ export const headerData: HeaderProps = {
         //   href: '/training/manuals',
         // },
         {
-          label: 'Standard Operating Procedures',
-          href: '/sop',
+          label: 'ATC Documents',
+          href: '/atcdocs',
         },
         // {
         //   label: 'Letters of Agreement',
