@@ -1,55 +1,60 @@
-import type { Metadata } from 'next';
+"use client";
 
-import { SITE } from '~/config.js';
-
-import Hero from '~/components/widgets/Hero';
-import Features from '~/components/widgets/Features';
-import Content from '~/components/widgets/Content';
-import Steps from '~/components/widgets/Steps';
-import Testimonials from '~/components/widgets/Testimonials';
-import FAQs2 from '~/components/widgets/FAQs2';
-import Pricing from '~/components/widgets/Pricing';
-import Team2 from '~/components/widgets/Team2';
-import Roster from '~/components/widgets/Roster';
-import Page404 from '~/components/widgets/Page404';
-import CallToAction2 from '~/components/widgets/CallToAction2';
-import Contact from '~/components/widgets/Contact';
-import {
-  // callToAction2Home,
-  // contactHome,
-  // contentHomeOne,
-  // contentHomeTwo,
-  // faqs2Home,
-  // featuresHome,
-  ourTeam,
-  // pricingHome,
-  // socialProofHome,
-  // stepsHome,
-  teamAbout,
-  rosterAbout2,
-  // testimonialsHome,
-} from '~/shared/data/pages/about.data';
-
-export const metadata: Metadata = {
-  title: `Weather`,
-};
+import { useState } from 'react';
+import Head from 'next/head';
 
 export default function Page() {
+  const [icaoCodes, setIcaoCodes] = useState<string[]>([]);
+  const [inputValue, setInputValue] = useState<string>('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleAddIcaoCode = () => {
+    const codes = inputValue.split(' ').map(code => code.trim().toUpperCase()).filter(code => code);
+    setIcaoCodes(codes);
+  };
+
   return (
     <>
-      {/* <Hero {...rosterAbout} /> */}
-      {/* <SocialProof {...socialProofHome} /> */}
-      {/* <Features {...featuresHome} /> */}
-      {/* <Content {...contentHomeOne} /> */}
-      {/* <Content {...contentHomeTwo} /> */}
-      {/* <Steps {...stepsHome} /> */}
-      {/* <Testimonials {...testimonialsHome} /> */}
-      {/* <FAQs2 {...faqs2Home} /> */}
-      {/* <Pricing {...pricingHome} /> */}
-      {/* <Roster {...rosterAbout2} /> */}
-      <Page404 />
-      {/* <Contact {...contactHome} /> */}
-      {/* <CallToAction2 {...callToAction2Home} /> */}
+      <Head>
+        <title>Weather</title>
+      </Head>
+      <div className="container p-4 mx-auto">
+        <h1 className="mb-4 text-2xl font-bold">Weather Information</h1>
+        <div className="mb-4">
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Enter ICAO codes separated by space (e.g., WIII WADD CYVR CYEG)"
+            className="p-2 mr-2 border"
+          />
+          <button onClick={handleAddIcaoCode} className="p-2 text-white bg-blue-500">
+            Add ICAO Codes
+          </button>
+        </div>
+        <div>
+          {icaoCodes.map((code, index) => (
+            <div key={index} className="mb-4">
+              <a
+                href={`https://metar-taf.com/${code}`}
+                id={`metartaf-${code}`}
+                className="block text-lg font-medium text-black"
+                style={{ width: '1000px', height: '500px' }}
+              >
+                METAR Information for {code}
+              </a>
+              <script
+                async
+                defer
+                src={`https://metar-taf.com/embed-js/${code}?layout=landscape&qnh=hPa&rh=rh&target=${code}`}
+              ></script>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
