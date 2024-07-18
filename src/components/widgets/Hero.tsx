@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { HeroProps } from '~/shared/types';
 import CTA from '../common/CTA';
+import CarouselFlow from './CarouselFlow';
 
 const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: HeroProps) => {
   return (
@@ -9,9 +10,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
         <div className="py-12 md:py-20">
           <div className="mx-auto max-w-4xl pb-10 text-center md:pb-16">
             {tagline && (
-              <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
-                {tagline}
-              </p>
+              <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">{tagline}</p>
             )}
             {title && (
               <h1 className="leading-tighter font-heading mb-6 text-3xl font-bold tracking-tighter md:text-3xl xl:text-5xl">
@@ -28,7 +27,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
           </div>
           {image && (
             <div className="relative m-auto max-w-5xl">
-              <Image
+              {/* <Image
                 className="mx-auto h-auto w-full rounded-md bg-gray-400 dark:bg-slate-700"
                 src={image.src}
                 alt={image.alt}
@@ -38,7 +37,8 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
                 loading="eager"
                 placeholder="blur"
                 priority
-              />
+              /> */}
+              <CarouselFlow />
             </div>
           )}
         </div>

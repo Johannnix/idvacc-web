@@ -16,21 +16,8 @@ module.exports = {
       'vatsim-my.nyc3.digitaloceanspaces.com',
       'vatsim-forums.nyc3.digitaloceanspaces.com',
       'i.imgur.com',
+      'upload.wikimedia.org',
     ],
-    loader: 'default', // or use your custom loader if necessary
-    // remotePatterns: [  // You can remove this section if not needed
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'images.unsplash.com',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'source.unsplash.com',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'vatsim-forums.nyc3.digitaloceanspaces.com',
-    //   },
-    // ],
+    loader: 'default',
   },
 };

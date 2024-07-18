@@ -1,9 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const flowbite = require("flowbite-react/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx,md,mdx}', "./node_modules/flowbite-react/lib/**/*.js",],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx,md,mdx}',
+    './node_modules/flowbite-react/lib/**/*.js',
+    flowbite.content(),
+  ],
   theme: {
     extend: {
       colors: {
@@ -15,6 +21,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'),  require("flowbite/plugin")],
+  plugins: [
+    require('@tailwindcss/typography'),
+    flowbite.plugin(),
+  ],
   darkMode: 'class',
 };
