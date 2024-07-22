@@ -99,12 +99,16 @@ export const headerData: HeaderProps = {
       links: [
         {
           label: "General Policy",
-          href: "generalpolicy"
+          href: "/generalpolicy"
         },
         {
           label: 'Weather',
           href: '/weather',
         },
+        {
+          label: 'Pilot Resources',
+          href: 'https://vatsim.net/docs/pilots/pilots',
+        }
         // {
         //   label: 'Pre-Departure Clearance',
         //   href: '/pdc',

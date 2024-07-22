@@ -37,19 +37,19 @@ export default function Page() {
         </div>
         <div>
           {icaoCodes.map((code, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 bg-white">
               <a
                 href={`https://metar-taf.com/${code}`}
                 id={`metartaf-${code}`}
-                className="block text-lg font-medium text-black"
-                style={{ width: '1000px', height: '500px' }}
+                className="block text-lg font-medium text-black h-[500px]"
+                style={{ padding: '2em' }}
               >
                 METAR Information for {code}
               </a>
               <script
                 async
                 defer
-                src={`https://metar-taf.com/embed-js/${code}?layout=landscape&qnh=hPa&rh=rh&target=${code}`}
+                src={`https://metar-taf.com/embed-js/${code}?layout=landscape&qnh=hPa&rh=dp&target=${code}`}
               ></script>
             </div>
           ))}
