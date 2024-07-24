@@ -99,7 +99,7 @@ export const headerData: HeaderProps = {
       links: [
         {
           label: "General Policy",
-          href: "/generalpolicy"
+          href: "https://vatsim.net/docs/policy/code-of-conduct"
         },
         {
           label: 'Weather',
