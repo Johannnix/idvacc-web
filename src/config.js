@@ -1,7 +1,7 @@
 module.exports.SITE = {
   name: 'Indonesia vACC',
 
-  origin: 'https://tailnext.vercel.app',
+  origin: 'https://idvacc.id',
   basePathname: '/',
   trailingSlash: false,
 
