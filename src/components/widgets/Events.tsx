@@ -50,7 +50,7 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
           <div>
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">Events</p>
-              <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
+              <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-5xl">
                 Upcoming Events
               </h1>
               <p className="mb-6 text-md font-normal text-gray-600 dark:text-slate-400">

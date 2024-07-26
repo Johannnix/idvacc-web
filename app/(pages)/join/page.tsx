@@ -9,11 +9,10 @@ import Steps from '~/components/widgets/Steps';
 import Testimonials from '~/components/widgets/Testimonials';
 import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
-import Team2 from '~/components/widgets/Team2';
-import Roster from '~/components/widgets/Roster';
-import Page404 from '~/components/widgets/Page404';
+import Events from '~/components/widgets/Events';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
+import Join from '~/components/widgets/JoinUs';
 import {
   // callToAction2Home,
   // contactHome,
@@ -21,12 +20,10 @@ import {
   // contentHomeTwo,
   // faqs2Home,
   // featuresHome,
-  ourTeam,
   // pricingHome,
   // socialProofHome,
   // stepsHome,
-  teamAbout,
-  rosterAbout2,
+  event,
   // testimonialsHome,
 } from '~/shared/data/pages/about.data';
 
@@ -37,7 +34,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      {/* <Hero {...rosterAbout} /> */}
+      {/* <Hero {...Events} /> */}
       {/* <SocialProof {...socialProofHome} /> */}
       {/* <Features {...featuresHome} /> */}
       {/* <Content {...contentHomeOne} /> */}
@@ -46,8 +43,8 @@ export default function Page() {
       {/* <Testimonials {...testimonialsHome} /> */}
       {/* <FAQs2 {...faqs2Home} /> */}
       {/* <Pricing {...pricingHome} /> */}
-      {/* <Roster {...rosterAbout2} /> */}
-      <Page404 />
+      {/* <Events {...event} /> */}
+      <Join {...event} />
       {/* <Contact {...contactHome} /> */}
       {/* <CallToAction2 {...callToAction2Home} /> */}
     </>

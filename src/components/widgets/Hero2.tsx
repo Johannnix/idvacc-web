@@ -13,7 +13,7 @@ const Hero2 = ({ title, subtitle, tagline, image }: HeroProps) => {
                 </p>
               )}
               {title && (
-                <h1 className="leading-tighter font-heading mb-4 px-4 text-3xl font-bold tracking-tighter md:px-0 md:text-[3.48rem]">
+                <h1 className="leading-tighter font-heading mt-2 mb-4 px-4 text-3xl font-bold tracking-tighter md:px-0 md:text-5xl">
                   {title}
                 </h1>
               )}

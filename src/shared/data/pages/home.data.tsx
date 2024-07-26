@@ -57,9 +57,9 @@ export const heroHome: HeroProps = {
   ),
   callToAction: {
     text: 'Join us now',
-    href: 'https://community.vatsim.net/',
+    href: '/join',
     icon: IconArrowRight,
-    targetBlank: true
+    targetBlank: false
   },
   image: {
     src: heroImg,
