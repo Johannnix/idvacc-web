@@ -66,8 +66,8 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
           <div className="flex justify-center items-center gap-6 flex-col md:flex-row">
             {filteredEvents.map((event: any) => (
               <div key={event.id}>
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72">
-                  <a href="#">
+                <a href={`https://hq.vat-sea.com/event/${event.id}`}>
+                  <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 transition-transform duration-300 ease-in-out transform hover:scale-105">
                     <Image
                       src={event.banner_link}
                       width={290}
@@ -75,24 +75,20 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
                       alt={event.title}
                       className="rounded-t-lg w-full"
                     />
-                  </a>
-                  <div className="p-5">
-                    <a href="#">
-                      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {event.title}
-                      </h5>
-                    </a>
-                    <hr className="w-full bg-white h-px mt-4 mb-4" />
-                    <div className="flex justify-between items-center">
-                      <span className="text-green-500">Roster Released</span>
-                      <span className="text-gray-700 dark:text-gray-400 text-right">{formatDate(event.start)}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700 dark:text-white">Event Status</span>
-                      <span className="text-gray-700 dark:text-white">Event Start</span>
+                    <div className="p-5">
+                      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{event.title}</h5>
+                      <hr className="w-full bg-white h-px mt-4 mb-4" />
+                      <div className="flex justify-between items-center">
+                        <span className="text-green-500">Roster Released</span>
+                        <span className="text-gray-700 dark:text-gray-400 text-right">{formatDate(event.start)}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-700 dark:text-white">Event Status</span>
+                        <span className="text-gray-700 dark:text-white">Event Start</span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
