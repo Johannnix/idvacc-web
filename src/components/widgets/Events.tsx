@@ -94,7 +94,7 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
           </div>
         ) : (
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">No upcoming events</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h2>
           </div>
         )}
       </section>
