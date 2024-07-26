@@ -1,16 +1,18 @@
+import axios from 'axios';
 import { RosterProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import Image from 'next/image';
 
 const getEvent = async () => {
-  const res = await fetch('https://hq.vat-sea.com/api/events/vacc/idn');
-  if (!res.ok) {
+  try {
+    const res = await axios.get('https://hq.vat-sea.com/api/events/vacc/idn');
+    return res.data;
+  } catch (error) {
     throw new Error('Failed to fetch events');
   }
-  return res.json();
 };
 
-const formatDate = (dateTimeString: any) => {
+const formatDate = (dateTimeString: string) => {
   const [datePart, timePart] = dateTimeString.split('T');
   const dateParts = datePart.split('-');
   const day = dateParts[2];
@@ -42,7 +44,8 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
   const events = await getEvent();
   const dateNow = new Date();
   const utcTimeString = dateNow.toISOString();
-  const filteredEvents = events.filter((event:any) => new Date(utcTimeString) < new Date(event.end));
+  const filteredEvents = events.filter((event: any) => new Date(utcTimeString) < new Date(event.end));
+
   return (
     <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
       <section id="heroOne">
@@ -61,28 +64,28 @@ const Event = async ({ id, hasBackground }: RosterProps) => {
         </div>
         {filteredEvents.length > 0 ? (
           <div className="flex justify-center items-center gap-6 flex-col md:flex-row">
-            {filteredEvents.map((events: any) => (
-              <div key={events.id}>
+            {filteredEvents.map((event: any) => (
+              <div key={event.id}>
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72">
                   <a href="#">
                     <Image
-                      src={events.banner_link}
+                      src={event.banner_link}
                       width={290}
                       height={160}
-                      alt={events.title}
+                      alt={event.title}
                       className="rounded-t-lg w-full"
                     />
                   </a>
                   <div className="p-5">
                     <a href="#">
                       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {events.title}
+                        {event.title}
                       </h5>
                     </a>
                     <hr className="w-full bg-white h-px mt-4 mb-4" />
                     <div className="flex justify-between items-center">
                       <span className="text-green-500">Roster Released</span>
-                      <span className="text-gray-700 dark:text-gray-400 text-right">{formatDate(events.start)}</span>
+                      <span className="text-gray-700 dark:text-gray-400 text-right">{formatDate(event.start)}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700 dark:text-white">Event Status</span>
