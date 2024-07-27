@@ -41,18 +41,6 @@ export const headerData: HeaderProps = {
           label: 'Events',
           href: '/events',
         },
-        // {
-        //   label: 'Controller Roster',
-        //   href: '/roster',
-        // },
-        // {
-        //   label: 'Branding',
-        //   href: '/branding',
-        // },
-        // {
-        //   label: 'Partners',
-        //   href: '/partners',
-        // },
         {
           label: 'Privacy Policy',
           href: 'https://vatsim.net/docs/policy/privacy-policy',
@@ -83,14 +71,6 @@ export const headerData: HeaderProps = {
           label: 'ATC Documents',
           href: '/atcdocs',
         },
-        // {
-        //   label: 'Letters of Agreement',
-        //   href: '/loa',
-        // },
-        // {
-        //   label: 'Downloads',
-        //   href: '/downloads',
-        // },
       ],
     },
     {
@@ -133,7 +113,7 @@ export const headerData: HeaderProps = {
     },
     {
       label: 'Training',
-      href: 'http://66.55.66.153:3000/',
+      href: 'https://cbt.idvacc.id/',
     },
   ],
   actions: [
