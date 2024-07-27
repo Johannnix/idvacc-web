@@ -11,17 +11,9 @@ import Steps from '~/components/widgets/Steps';
 import Team2 from '~/components/widgets/Team2';
 import Testimonials2 from '~/components/widgets/Testimonials2';
 import {
-  contactAbout,
-  faqsAbout,
   featuresFourAbout,
   featuresFourAboutTwo,
-  features3About,
   hero2About,
-  statsAbout,
-  stepsAbout,
-  testimonials2About,
-  featuresAbout,
-  teamAbout,
 } from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
