@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { EventProps, RosterProps } from '~/shared/types';
+import { EventProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import Image from 'next/image';
 
