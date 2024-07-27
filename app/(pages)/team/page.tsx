@@ -13,25 +13,30 @@ import Team2 from '~/components/widgets/Team2';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
 import {
-  // callToAction2Home,
-  // contactHome,
-  // contentHomeOne,
-  // contentHomeTwo,
-  // faqs2Home,
-  // featuresHome,
   ourTeam,
-  // pricingHome,
-  // socialProofHome,
-  // stepsHome,
   teamAbout,
-  // testimonialsHome,
 } from '~/shared/data/pages/about.data';
+import axios from 'axios';
+
 
 export const metadata: Metadata = {
   title: `Our Team`,
 };
 
 export default function Page() {
+  const getStaffData = async () => {
+    const { data } = await axios.get('https://hq.vat-sea.com/api/vacc/idn/staff')
+    if (data) {
+      teamAbout.teams.forEach((team, index) => {
+        team.name = String(data[index].name).toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+        team.occupation = `${data[index].position_name} | ${data[index].position_code}`;
+      })
+      teamAbout.teams.sort((a, b) => a.occupation.split(' | ')[1].localeCompare(b.occupation.split(' | ')[1]));
+    }
+  }
+
+  getStaffData();
+
   return (
     <>
       <Hero {...ourTeam} />
