@@ -27,7 +27,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.33.4",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "ts-metar-parser": "^1.0.3"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.6.10",
