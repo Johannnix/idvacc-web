@@ -133,7 +133,7 @@ const CardWeather = ({ airport, data }: CardWeatherProps) => {
         <h1 className="text-xl font-semibold">Weather & METAR for {airport} ({data.icao?.toUpperCase()})</h1>
         <div className="mt-5">
           {
-            data ? (
+            data ? ( 
               <>
                 <pre>{data.raw_text}</pre>
                 <div className="mt-3">
