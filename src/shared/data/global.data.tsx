@@ -55,7 +55,7 @@ export const headerData: HeaderProps = {
         // },
         {
           label: 'Privacy Policy',
-          href: '/privacy',
+          href: 'https://vatsim.net/docs/policy/privacy-policy',
         },
       ],
     },
@@ -98,8 +98,8 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: "General Policy",
-          href: "https://vatsim.net/docs/policy/code-of-conduct"
+          label: 'General Policy',
+          href: 'https://vatsim.net/docs/policy/code-of-conduct',
         },
         {
           label: 'Weather',
@@ -108,7 +108,7 @@ export const headerData: HeaderProps = {
         {
           label: 'Pilot Resources',
           href: 'https://vatsim.net/docs/pilots/pilots',
-        }
+        },
         // {
         //   label: 'Pre-Departure Clearance',
         //   href: '/pdc',
