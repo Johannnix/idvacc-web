@@ -30,11 +30,11 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'About us',
+          label: 'About Us',
           href: '/about',
         },
         {
-          label: 'Our team',
+          label: 'Our Team',
           href: '/team',
         },
         {
@@ -67,10 +67,10 @@ export const headerData: HeaderProps = {
           label: 'Join Us',
           href: '/join',
         },
-        // {
-        //   label: 'Facility General Policies',
-        //   href: '/fgp',
-        // },
+        {
+          label: 'Controller Roster',
+          href: '/roster',
+        },
         // {
         //   label: 'Training Syllabus',
         //   href: '/training/syllabus',
@@ -316,20 +316,16 @@ export const footerData2: FooterProps = {
           href: 'https://community.vatsim.net/',
         },
         {
-          label: 'Twitter',
-          href: '#',
+          label: 'Facebook',
+          href: 'https://www.facebook.com/vaccindonesia/',
         },
         {
           label: 'Instagram',
-          href: '#',
-        },
-        {
-          label: 'Facebook',
-          href: '#',
+          href: 'https://www.instagram.com/indonesiavacc/',
         },
         {
           label: 'YouTube',
-          href: '#',
+          href: 'https://www.youtube.com/@vatsimindonesia5439',
         },
       ],
     },
@@ -337,7 +333,7 @@ export const footerData2: FooterProps = {
       title: 'Quick Links',
       links: [
         { label: 'Privacy Policy', href: '/#' },
-        { label: 'Join IDvACC', href: '/#' },
+        { label: 'Join IDvACC', href: '/join' },
         { label: 'Bookings', href: '/#' },
         { label: 'FAQs', href: '/#' },
         { label: 'Membership Tickets', href: '/#' },
@@ -345,11 +341,10 @@ export const footerData2: FooterProps = {
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
-    { label: 'Youtube', icon: IconBrandYoutube, href: '#' },
-    { label: 'Discord', icon: IconBrandDiscord, href: '#' },
+    { label: 'Discord', icon: IconBrandDiscord, href: 'https://community.vatsim.net/' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/vaccindonesia/' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/indonesiavacc/' },
+    { label: 'Youtube', icon: IconBrandYoutube, href: 'https://www.youtube.com/@vatsimindonesia5439' },
   ],
   footNote: (
     <div className="mr-4 text-sm rtl:mr-0 rtl:ml-4">
