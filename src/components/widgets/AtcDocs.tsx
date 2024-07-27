@@ -47,7 +47,7 @@ interface Docs {
 
 const DocumentsData = ({ name, filename }: Docs) => {
   return (
-    <div className="p-4 text-white bg-gray-800 rounded-lg shadow-md">
+    <div className="bg-white rounded-lg shadow-md p-4 dark:bg-[#1e293b]">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-base">{name}</h2>
@@ -60,11 +60,6 @@ const DocumentsData = ({ name, filename }: Docs) => {
         </a>
       </div>
     </div>
-    // <a download href={`./${filename}`}>
-    //   <div className="p-4 mx-24 border-2 border-white rounded-lg hover:bg-[#afafaf] transition hover:text-black font-semibold hover:cursor-pointer">
-    //     {name}
-    //   </div>
-    // </a>
   );
 };
 

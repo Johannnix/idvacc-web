@@ -9,6 +9,7 @@ import {
   EventProps,
   RosterProps,
   TestimonialsProps,
+  ManagementTeamProps,
 } from '~/shared/types';
 import {
   IconAdjustments,
@@ -136,7 +137,7 @@ export const rosterAbout: HeroProps = {
   tagline: 'Controller Roster',
 };
 
-export const weather: HeroProps = { 
+export const weather: HeroProps = {
   title: 'VATSIM Weather Information',
   tagline: 'Weather',
 }
@@ -225,7 +226,7 @@ export const featuresFourAboutTwo: FeaturesProps = {
 // Team data on About page *******************
 export const teamAbout: TeamProps = {
   id: 'team-on-about',
-  hasBackground: true,
+  hasBackground: false,
   teams: [
     {
       name: 'Gery Kurniawan',
@@ -333,3 +334,17 @@ export const rosterAbout2: RosterProps = {
     }
   ]
 };
+
+export const managementTeam: ManagementTeamProps = {
+  id: 'team-on-about',
+  hasBackground: false,
+  data: [
+    {
+      cid: 0,
+      name: '',
+      positionCode: '',
+      positionName: '',
+    }
+  ]
+};
+

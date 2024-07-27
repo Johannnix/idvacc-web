@@ -318,6 +318,17 @@ type JoinProps = Widget & {
   hasBackground: boolean;
 };
 
+type ManagementTeamProps = Widget & {
+  id?: string;
+  hasBackground: boolean;
+  data: {
+    cid: number;
+    name: String;
+    positionCode: String;
+    positionName: String;
+  }[];
+};
+
 type RosterProps = Widget & {
   id?: string;
   hasBackground?: boolean;
