@@ -1,5 +1,5 @@
 import React from 'react';
-import { RosterProps } from '~/shared/types';
+import { EventProps, RosterProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const docsConstant = [
@@ -13,18 +13,18 @@ const docsConstant = [
   },
 ];
 
-const JoinUs = ({ id, hasBackground }: RosterProps) => {
+const ATCDocs = ({ id, hasBackground }: EventProps) => {
   return (
     <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
       <section id="heroOne">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6">
           <div>
-            <div className="mx-auto max-w-4xl text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">ATC</p>
-              <h1 className="leading-tighter font-heading mb-6 text-4xl font-bold tracking-tighter md:text-5xl lg:text-5xl">
+              <h1 className="mb-6 text-4xl font-bold tracking-tighter leading-tighter font-heading md:text-5xl lg:text-5xl">
                 ATC Documents
               </h1>
-              <p className="mb-6 text-md font-normal text-gray-600 dark:text-slate-400">
+              <p className="mb-6 font-normal text-gray-600 text-md dark:text-slate-400">
                 Here is a list of ATC Documents can be accessed below
               </p>
               <div className="flex flex-col gap-3 mt-4">
@@ -47,8 +47,8 @@ interface Docs {
 
 const DocumentsData = ({ name, filename }: Docs) => {
   return (
-    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-      <div className="flex justify-between items-center">
+    <div className="p-4 text-white bg-gray-800 rounded-lg shadow-md">
+      <div className="flex items-center justify-between">
         <div>
           <h2 className="text-base">{name}</h2>
         </div>
@@ -68,4 +68,4 @@ const DocumentsData = ({ name, filename }: Docs) => {
   );
 };
 
-export default JoinUs;
+export default ATCDocs;

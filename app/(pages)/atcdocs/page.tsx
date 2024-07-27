@@ -65,19 +65,7 @@ import Events from '~/components/widgets/Events';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
 import ATCDoc from '~/components/widgets/AtcDocs';
-import {
-  // callToAction2Home,
-  // contactHome,
-  // contentHomeOne,
-  // contentHomeTwo,
-  // faqs2Home,
-  // featuresHome,
-  // pricingHome,
-  // socialProofHome,
-  // stepsHome,
-  event,
-  // testimonialsHome,
-} from '~/shared/data/pages/about.data';
+import { event } from '~/shared/data/pages/about.data';
 
 export const metadata: Metadata = {
   title: `ATC Documents`,
