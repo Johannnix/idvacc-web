@@ -328,7 +328,8 @@ export const rosterAbout2: RosterProps = {
       name: '',
       cid: 0,
       approvedFor: '',
-      status: ''
+      status: '',
+      rating: '',
     }
   ]
 };
