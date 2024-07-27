@@ -136,6 +136,11 @@ export const rosterAbout: HeroProps = {
   tagline: 'Controller Roster',
 };
 
+export const weather: HeroProps = { 
+  title: 'VATSIM Weather Information',
+  tagline: 'Weather',
+}
+
 // Stats data on About page *******************
 export const statsAbout: StatsProps = {
   id: 'stats-on-about',
