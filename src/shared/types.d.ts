@@ -315,7 +315,13 @@ type EventProps = Widget & {
 
 type RosterProps = Widget & {
   id?: string;
-  hasBackground: boolean;
+  hasBackground?: boolean;
+  data: {
+    name: String;
+    cid: number;
+    approvedFor: String;
+    status: String;
+  }[];
 };
 
 type AnnouncementProps = {
