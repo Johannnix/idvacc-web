@@ -1,9 +1,9 @@
 import React from 'react';
-import { RosterProps } from '~/shared/types';
+import { JoinProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 import Image from 'next/image';
 
-const JoinUs = ({ id, hasBackground }: RosterProps) => {
+const JoinUs = ({ id, hasBackground }: JoinProps) => {
   return (
     <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
       <section id="heroOne">

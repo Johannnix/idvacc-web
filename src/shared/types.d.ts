@@ -313,6 +313,11 @@ type EventProps = Widget & {
   hasBackground: boolean;
 };
 
+type JoinProps = Widget & {
+  id?: string;
+  hasBackground: boolean;
+};
+
 type RosterProps = Widget & {
   id?: string;
   hasBackground?: boolean;
