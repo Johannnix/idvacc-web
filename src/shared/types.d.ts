@@ -324,6 +324,7 @@ type RosterProps = Widget & {
   data: {
     name: String;
     cid: number;
+    rating: String;
     approvedFor: String;
     status: String;
   }[];

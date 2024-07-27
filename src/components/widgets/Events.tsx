@@ -66,7 +66,7 @@ const Event = async ({ id, hasBackground }: EventProps) => {
           <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
             {filteredEvents.map((event: any) => (
               <div key={event.id}>
-                <a href={`https://hq.vat-sea.com/event/${event.id}`}>
+                <a href={`https://hq.vat-sea.com/event/${event.id}`} target='_blank'>
                   <div className="max-w-sm transition-transform duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 hover:scale-105">
                     <Image
                       src={event.banner_link}

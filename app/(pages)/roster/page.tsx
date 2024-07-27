@@ -36,38 +36,38 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const getATCRoster =  async () => {
-    await Promise.all([
-      axios.get('https://hq.vat-sea.com/api/vacc/idn/resident'),
-      axios.get('https://hq.vat-sea.com/api/vacc/idn/visitor'),
-    ]).then(([data1,data2]) => {
-      const resident = data1.data
-      const visitor = data2.data
-      const temp: any = []
-      
-      resident.map((data: any) => {
-        temp.push({
-          name: String(data.name).toLowerCase().split(' ').map((s: string) => s.charAt(0).toUpperCase() + s.substring(1)).join(' '),
-          cid: data.cid,
-          approvedFor: data.approved_for,
-          status: 'Resident ATC'
-        })
-      })
+  // const getATCRoster =  async () => {
+  //   await Promise.all([
+  //     axios.get('https://hq.vat-sea.com/api/vacc/idn/resident'),
+  //     axios.get('https://hq.vat-sea.com/api/vacc/idn/visitor'),
+  //   ]).then(([data1,data2]) => {
+  //     const resident = data1.data
+  //     const visitor = data2.data
+  //     const temp: any = []
 
-      visitor.map((data: any) => {
-        temp.push({
-          name: String(data.name).toLowerCase().split(' ').map((s: string) => s.charAt(0).toUpperCase() + s.substring(1)).join(' '),
-          cid: data.cid,
-          approvedFor: data.approved_for,
-          status: 'Visitor ATC'
-        })
-      })
-      
-      rosterAbout2.data = temp.filter((data: any) => data.approvedFor !== null)
-    })
-  }
+  //     resident.map((data: any) => {
+  //       temp.push({
+  //         name: String(data.name).toLowerCase().split(' ').map((s: string) => s.charAt(0).toUpperCase() + s.substring(1)).join(' '),
+  //         cid: data.cid,
+  //         approvedFor: data.approved_for,
+  //         status: 'Resident ATC'
+  //       })
+  //     })
 
-  getATCRoster();
+  //     visitor.map((data: any) => {
+  //       temp.push({
+  //         name: String(data.name).toLowerCase().split(' ').map((s: string) => s.charAt(0).toUpperCase() + s.substring(1)).join(' '),
+  //         cid: data.cid,
+  //         approvedFor: data.approved_for,
+  //         status: 'Visitor ATC'
+  //       })
+  //     })
+
+  //     rosterAbout2.data = temp.filter((data: any) => data.approvedFor !== null)
+  //   })
+  // }
+
+  // getATCRoster();
 
   return (
     <>
