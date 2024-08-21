@@ -135,7 +135,7 @@ const CardWeather = ({ airport, data }: CardWeatherProps) => {
           {
             data ? (
               <>
-                <pre className="text-sm lg:text-3xl text-wrap">{data.raw_text}</pre>
+                <pre className="text-sm lg:text-xl text-wrap">{data.raw_text}</pre>
                 <div className="mt-3">
                   <p>Updated at : {format(`${data.observed}`, 'dd MMM yyyy p', {
                     timeZone: 'GMT'
