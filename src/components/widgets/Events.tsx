@@ -43,7 +43,7 @@ export default async function EventsPage({ id = '', hasBackground = false }) {
                 Upcoming Events
               </h1>
               <p className="mb-6 font-normal text-gray-600 text-md dark:text-slate-400">
-                All dates and times are in Zulu (UTC) time.
+                All dates and times are in your local browser time.
               </p>
             </div>
           </div>
