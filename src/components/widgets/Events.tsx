@@ -1,80 +1,14 @@
-import axios, { AxiosError } from 'axios';
-import { NextResponse } from 'next/server';
-import { EventProps } from '~/shared/types';
-import WidgetWrapper from '../common/WidgetWrapper';
 import Image from 'next/image';
+import WidgetWrapper from '../common/WidgetWrapper';
 
-interface Event {
-  id: number;
-  type: string;
-  name: string;
-  link: string;
-  organisers: {
-    region: string;
-    division: string;
-    subdivision: string | null;
-    organised_by_vatsim: boolean;
-  }[];
-  airports: {
-    icao: string;
-  }[];
-  routes: any[];
-  start_time: string;
-  end_time: string;
-  short_description: string;
-  description: string;
-  banner: string;
-}
+export default async function EventsPage({ id = '', hasBackground = false }) {
+  const res = await fetch('https://my.vatsim.net/api/v2/events/latest', {
+    cache: 'no-store', // Disable caching for fresh data
+  });
 
-interface ValidationError {
-  message: string;
-  errors: Record<string, string[]>;
-}
-
-const getEvent = async () => {
-  try {
-    const response = await axios.get<{ data: Event[] }>('https://my.vatsim.net/api/v2/events/latest');
-    const { data } = response.data;
-    if (data) {
-      const filteredData = data.filter((event) =>
-        event.airports.some((airport) => airport.icao.startsWith('WI') || airport.icao.startsWith('WA')),
-      );
-      return filteredData;
-    } else {
-      throw new AxiosError('No events found', '204');
-    }
-  } catch (e: any) {
-    if (axios.isAxiosError<ValidationError, Record<string, unknown>>(e)) {
-      throw new Error(e.message);
-    }
-  }
-};
-
-const formatDate = (dateTimeString: string) => {
-  const date = new Date(dateTimeString);
-  const utcDay = String(date.getUTCDate()).padStart(2, '0');
-  const utcMonth = String(date.getUTCMonth() + 1).padStart(2, '0'); // Months are zero-based
-  const utcYear = date.getUTCFullYear();
-
-  let utcHours = date.getUTCHours();
-  const utcMinutes = String(date.getUTCMinutes()).padStart(2, '0');
-  const period = utcHours >= 12 ? 'PM' : 'AM';
-  utcHours = utcHours % 12 || 12; // Convert to 12-hour format
-  const formattedTime = `${String(utcHours).padStart(2, '0')}:${utcMinutes} ${period}`;
-
-  const formattedDate = `${utcDay}/${utcMonth}/${utcYear} at`;
-
-  return { formattedDate, formattedTime };
-};
-
-const Event = async ({ id, hasBackground }: EventProps) => {
-  let events;
-  try {
-    events = await getEvent();
-  } catch (error) {
-    console.error(error);
+  if (!res.ok) {
     return (
-      <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
+      <WidgetWrapper id={id} hasBackground={hasBackground} containerClass="">
         <section id="heroOne">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Failed to fetch events</h2>
@@ -84,14 +18,22 @@ const Event = async ({ id, hasBackground }: EventProps) => {
     );
   }
 
+  const data = await res.json();
+
+  // Filter events based on ICAO codes that start with 'WI' or 'WA'
+  const filteredEventsByICAO = data.data.filter((event: any) =>
+    event.airports.some((airport: any) => airport.icao.startsWith('WI') || airport.icao.startsWith('WA')),
+  );
+
+  // Filter events based on the current time (only show upcoming events)
   const dateNow = new Date();
   const utcTimeString = dateNow.toISOString();
-  const filteredEvents = events
-    ? events.filter((event: any) => new Date(utcTimeString) < new Date(event.end_time))
-    : [];
+  const filteredEvents = filteredEventsByICAO.filter(
+    (event: any) => new Date(utcTimeString) < new Date(event.end_time),
+  );
 
   return (
-    <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
+    <WidgetWrapper id={id} hasBackground={hasBackground} containerClass="">
       <section id="heroOne">
         <div className="px-4 mx-auto max-w-7xl sm:px-6">
           <div>
@@ -113,7 +55,7 @@ const Event = async ({ id, hasBackground }: EventProps) => {
               return (
                 <div key={event.id}>
                   <a href={event.link} target="_blank" rel="noopener noreferrer">
-                    <div className="max-w-sm transition-transform duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 hover:scale-105">
+                    <div className="max-w-sm max-h-96 flex flex-col justify-between transition-transform duration-300 ease-in-out transform bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 hover:scale-105 overflow-hidden">
                       <Image
                         src={event.banner}
                         width={290}
@@ -121,13 +63,15 @@ const Event = async ({ id, hasBackground }: EventProps) => {
                         alt={event.name}
                         className="w-full rounded-t-lg"
                         layout="responsive"
-                        loading='lazy'
+                        loading="lazy"
                       />
-                      <div className="p-5">
-                        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          {event.name}
-                        </h5>
-                        <hr className="w-full h-px mt-4 mb-4 bg-white" />
+                      <div className="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white truncate">
+                            {event.name}
+                          </h5>
+                          <hr className="w-full h-px mt-4 mb-4 bg-white" />
+                        </div>
                         <div>
                           <div className="flex items-center justify-between">
                             <span className="text-green-500">Roster</span>
@@ -157,6 +101,14 @@ const Event = async ({ id, hasBackground }: EventProps) => {
       </section>
     </WidgetWrapper>
   );
-};
+}
 
-export default Event;
+function formatDate(dateString: string) {
+  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+  const formattedTime = new Date(dateString).toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  return { formattedDate, formattedTime };
+}
