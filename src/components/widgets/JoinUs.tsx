@@ -25,7 +25,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <br />
                 Our comprehensive training program prepares trainees to meet the highest standards of the VATSIM Global
                 Controller Administration Policy (GCAP), with a strong emphasis on local procedures. Navigate through
-                Indonesia dynamic and challenging airspace with confidence. Are you ready to take on the challenge?
+                Indonesia&apos;s dynamic and challenging airspace with confidence. Are you ready to take on the challenge?
                 Explore further details below!
               </p>
 
@@ -52,7 +52,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 </strong>
                 <br />
                 <br />
-                <strong className="dark:text-[#cbd5e1]">What's IDvACC?</strong>
+                <strong className="dark:text-[#cbd5e1]">What&apos;s IDvACC?</strong>
                 <br />
                 IDvACC is the Indonesian division of the VATSIM network, responsible for providing Air Traffic Control
                 (ATC) service and ATC Training across Indonesian airspace.
@@ -65,7 +65,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 </strong>
                 <ol className="list-decimal ml-5">
                   <li>
-                    Open the CBT page by using the "Training" button at the top of the IDvACC website or by visiting{' '}
+                    Open the CBT page by using the &quot;Training&quot; button at the top of the IDvACC website or by visiting{' '}
                     <a
                       href="http://cbt.idvacc.id"
                       className="underline text-primary-600 dark:text-primary-200 transition-colors duration-300 hover:text-primary-800 dark:hover:text-primary-400"
@@ -77,9 +77,9 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                     .
                   </li>
                   <li>Log in using your VATSIM credentials.</li>
-                  <li>Click the "Courses" button on the left tab.</li>
+                  <li>Click the &quot;Courses&quot; button on the left tab.</li>
                   <li>Complete the required courses and topics inside (Block 1 & Block 2).</li>
-                  <li>Once all training is completed, the "Pretest" button will appear.</li>
+                  <li>Once all training is completed, the &quot;Pretest&quot; button will appear.</li>
                 </ol>
               </div>
               <div className="text-md font-normal text-gray-600 dark:text-slate-400 mt-4">
@@ -108,7 +108,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                     to create a ticket.
                   </li>
                   <li>
-                    Set the assigned staff to "Indonesia vACC Staff" and the subject to “Resident Controller
+                    Set the assigned staff to &quot;Indonesia vACC Staff&quot; and the subject to “Resident Controller
                     Application”
                   </li>
                   <li>
