@@ -46,7 +46,9 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
               <div className="bg-white rounded-lg shadow-md p-4 dark:bg-[#1e293b]">
                 <h3 className="text-xl font-bold mb-2">RESIDENT CONTROLLER</h3>
                 <div
-                  className={`bg-${residentStatus === 'open' ? 'green-500' : 'red-500'} text-white rounded-lg px-4 py-2`}
+                  className={`${
+                    residentStatus === 'open' ? 'bg-green-500' : 'bg-red-500'
+                  } text-white rounded-lg px-4 py-2`}
                   onClick={scrollToApplicationProcess}
                   role="button"
                   tabIndex={0}
@@ -58,13 +60,15 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
               <div className="bg-white rounded-lg shadow-md p-4 dark:bg-[#1e293b]">
                 <h3 className="text-xl font-bold mb-2">VISITING CONTROLLER</h3>
                 <div
-                  className={`bg-${visitorStatus === 'open' ? 'green-500' : 'red-500'} text-white rounded-lg px-4 py-2`}
+                  className={`${
+                    visitorStatus === 'closed' ? 'bg-red-500' : 'bg-green-500'
+                  } text-white rounded-lg px-4 py-2`}
                   onClick={scrollToApplicationProcess}
                   role="button"
                   tabIndex={0}
                   onKeyPress={(e) => e.key === 'Enter' && scrollToApplicationProcess()}
                 >
-                  {visitorStatus === 'open' ? 'STATUS: OPEN' : 'STATUS: CLOSED'}
+                  {visitorStatus === 'closed' ? 'STATUS: CLOSED' : 'STATUS: OPEN'}
                 </div>
                 {visitorStatus === 'closed' && <p className="mt-2">Until Further Notice</p>}
               </div>
@@ -97,7 +101,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <div className="border-2 border-t w-12 border-blue-500 flex-grow ml-2"></div>
               </div>
               <strong className="mb-8 text-md font-semibold text-gray-600 dark:text-white">
-                READ BEFORE CLICKING ‘APPLY’.
+              READ BELOW CAREFULLY!.
               </strong>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col items-start">
