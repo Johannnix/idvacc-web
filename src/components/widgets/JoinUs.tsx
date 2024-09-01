@@ -101,7 +101,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <div className="border-2 border-t w-12 border-blue-500 flex-grow ml-2"></div>
               </div>
               <strong className="mb-8 text-md font-semibold text-gray-600 dark:text-white">
-              READ BELOW CAREFULLY!.
+              READ BELOW CAREFULLY!
               </strong>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col items-start">
