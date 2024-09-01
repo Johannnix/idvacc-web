@@ -106,7 +106,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col items-start">
                   <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
-                    If you are applying as a RESIDENT CONTROLLER
+                    If you are applying as a RESIDENT CONTROLLER...
                   </p>
                   <div className="mt-4 text-left">
                     <div className="text-md font-normal text-gray-600 dark:text-slate-400">
