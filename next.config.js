@@ -27,7 +27,7 @@ module.exports = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "frame-src 'self' https://vatsim-radar.com/?preset=id; frame-ancestors 'self';",
+            value: "frame-src *; frame-ancestors 'self';",
           },
           // Add other headers if needed
         ],
