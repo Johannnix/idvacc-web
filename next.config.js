@@ -20,18 +20,4 @@ module.exports = {
     ],
     loader: 'default',
   },
-  async headers() {
-    return [
-      {
-        source: '/(.*)', // Apply to all routes
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: 'frame-src *; frame-ancestors *;',
-          },
-          // Add other headers if needed
-        ],
-      },
-    ];
-  },
 };
