@@ -30,14 +30,14 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
               <CarouselFlow />
             </div>
           )}
-          {/* <p className="hidden text-base font-semibold mt-24 text-center tracking-wide text-primary-600 dark:text-primary-200 md:block">Maps</p>
+          <p className="hidden text-base font-semibold mt-24 text-center tracking-wide text-primary-600 dark:text-primary-200 md:block">Maps</p>
           <h2 className="hidden leading-tighter font-heading font-bold tracking-tighter text-center md:text-3xl md:block">
             Indonesia Map
           </h2>
           <iframe
             className="hidden md:block m-auto max-w-5xl w-full h-96 mt-8 rounded-lg"
             src="https://vatsim-radar.com/?preset=id"
-          ></iframe> */}
+          ></iframe>
         </div>
       </div>
     </section>
