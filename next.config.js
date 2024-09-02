@@ -27,7 +27,7 @@ module.exports = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "frame-src *; frame-ancestors 'self';",
+            value: 'frame-src *; frame-ancestors *;',
           },
           // Add other headers if needed
         ],
