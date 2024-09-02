@@ -255,6 +255,14 @@ type FAQsProps = Widget & {
   callToAction?: CallToActionType;
 };
 
+type PartnersProps = Widget & {
+  header?: Header;
+  items?: Array<{
+    title: string;
+    description: ReactNode;
+  }>;
+};
+
 type CollapseProps = {
   items: Array<Item>;
   classCollapseItem?: string;

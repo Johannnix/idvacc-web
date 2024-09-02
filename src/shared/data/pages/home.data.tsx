@@ -25,6 +25,7 @@ import {
   FAQsProps,
   FeaturesProps,
   HeroProps,
+  PartnersProps,
   PricingProps,
   SocialProofProps,
   StepsProps,
@@ -373,6 +374,16 @@ export const faqs2Home: FAQsProps = {
   ],
 };
 
+export const partnersHome: PartnersProps = {
+  id: 'partners-on-home',
+  hasBackground: true,
+  header: {
+    title: 'Our Partners',
+    // subtitle: 'Common questions that we usually get asked about.',
+    tagline: 'Partners',
+  },
+};
+
 // Pricing data on Home page *******************
 export const pricingHome: PricingProps = {
   id: 'pricing-on-home',
@@ -579,7 +590,7 @@ export const teamHome: TeamProps = {
 
 // Contact data on Home page *******************
 export const contactHome: ContactProps = {
-  hasBackground: true,
+  hasBackground: false,
   header: {
     title: 'Get in Touch',
     subtitle: 'How can we help you?',

@@ -12,8 +12,10 @@ import {
   faqs2Home,
   featuresHome,
   heroHome,
+  partnersHome,
   stepsHome,
 } from '~/shared/data/pages/home.data';
+import Partners from '~/components/widgets/Partners';
 
 export const metadata: Metadata = {
   title: SITE.title,
@@ -31,6 +33,7 @@ export default function Page() {
       {/* <Testimonials {...testimonialsHome} /> */}
       <FAQs2 {...faqs2Home} />
       {/* <Pricing {...pricingHome} /> */}
+      <Partners {...partnersHome} />
       {/* <Team {...teamHome} /> */}
       <Contact {...contactHome} />
       {/* <CallToAction2 {...callToAction2Home} /> */}

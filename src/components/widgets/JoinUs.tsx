@@ -7,7 +7,7 @@ type Status = 'open' | 'closed';
 
 const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
   const residentStatus: Status = 'open'; // Change to 'closed' to test closed status
-  const visitorStatus: Status = 'closed'; // Change to 'open' to test open status
+  const visitorStatus: Status = 'open'; // Change to 'open' to test open status
 
   const applicationProcessRef = useRef<HTMLDivElement | null>(null);
 
@@ -61,16 +61,16 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <h3 className="text-xl font-bold mb-2">VISITING CONTROLLER</h3>
                 <div
                   className={`${
-                    visitorStatus === 'closed' ? 'bg-red-500' : 'bg-green-500'
+                    visitorStatus === 'open' ? 'bg-green-500' : 'bg-red-500'
                   } text-white rounded-lg px-4 py-2`}
                   onClick={scrollToApplicationProcess}
                   role="button"
                   tabIndex={0}
                   onKeyPress={(e) => e.key === 'Enter' && scrollToApplicationProcess()}
                 >
-                  {visitorStatus === 'closed' ? 'STATUS: CLOSED' : 'STATUS: OPEN'}
+                  {visitorStatus === 'open' ? 'STATUS: OPEN' : 'STATUS: CLOSED'}
                 </div>
-                {visitorStatus === 'closed' && <p className="mt-2">Until Further Notice</p>}
+                {/* {visitorStatus === 'closed' && <p className="mt-2">Until Further Notice</p>} */}
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
               READ BELOW CAREFULLY!.
               </strong>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col">
                   <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
                     If you are applying as a RESIDENT CONTROLLER...
                   </p>
@@ -189,12 +189,43 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col items-end">
-                  {/* <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
+                <div className="flex flex-col">
+                  <p className="text-base font-semibold tracking-wide text-primary-600 dark:text-primary-200">
                     If you are applying as a VISITING CONTROLLER...
                   </p>
-                  <div className="text-md font-normal text-gray-600 dark:text-slate-400 mt-2">
-                  </div> */}
+                  <div className="text-left">
+                    <div className="text-md font-normal text-gray-600 dark:text-slate-400">
+                    <div className="text-md font-normal text-gray-600 dark:text-slate-400 mt-4">
+                      <strong className="dark:text-[#cbd5e1]">Step 1 - Submitting Your Application</strong>
+                      <ol className="list-decimal ml-5">
+                        <li>
+                          Go to the{' '}
+                          <a
+                            href="https://hq.vat-sea.com/support/create"
+                            className="underline text-primary-600 dark:text-primary-200 transition-colors duration-300 hover:text-primary-800 dark:hover:text-primary-400"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            IDvACC Support Portal
+                          </a>{' '}
+                          to create a ticket.
+                        </li>
+                        <li>
+                          Set the assigned staff to &quot;Indonesia vACC Staff&quot; and the subject to “Visiting Controller Application”
+                        </li>
+                        <li>
+                          In the description field, include:
+                          <ul className="list-disc ml-5 mt-2">
+                                <li>Are you familiar with Indonesian airspace?</li>
+                                <li>State your Home vACC</li>
+                                <li>Recommendation Letter from Home vACC is required and should be sent to <span className='text-gray-600 dark:dark:text-[#cbd5e1]'>training.idvacc@gmail.com</span> prior to submitting your application.</li>
+                              </ul>
+                            </li>
+                      </ol>
+                    </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
