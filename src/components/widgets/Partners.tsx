@@ -7,7 +7,7 @@ const partners = [
   { src: '/images/partners/vatsim.png', alt: 'Vatsim', link: 'https://www.vatsim.net' },
   { src: '/images/partners/vatsea.png', alt: 'Vatsea', link: 'https://vat-sea.com/' },
   { src: '/images/partners/vatsimRadar.svg', alt: 'Vatsim Radar', link: 'https://www.vatsim.net' },
-  // { src: '/images/partners/gv.png', alt: 'Garuda Virtual', link: 'https://garudavirtual.org/' },
+  { src: '/images/partners/gv.png', alt: 'Garuda Virtual', link: 'https://garudavirtual.org/' },
   // Add other partners here with their corresponding links
 ];
 
