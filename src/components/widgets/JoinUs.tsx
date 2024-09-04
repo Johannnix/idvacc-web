@@ -6,7 +6,7 @@ import WidgetWrapper from '../common/WidgetWrapper';
 type Status = 'open' | 'closed';
 
 const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
-  const residentStatus: Status = 'open'; // Change to 'closed' to test closed status
+  const residentStatus: Status = 'closed'; // Change to 'closed' to test closed status
   const visitorStatus: Status = 'open'; // Change to 'open' to test open status
 
   const applicationProcessRef = useRef<HTMLDivElement | null>(null);
@@ -47,15 +47,16 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <h3 className="text-xl font-bold mb-2">RESIDENT CONTROLLER</h3>
                 <div
                   className={`${
-                    residentStatus === 'open' ? 'bg-green-500' : 'bg-red-500'
+                    residentStatus === 'closed' ? 'bg-red-500' : 'bg-green-500'
                   } text-white rounded-lg px-4 py-2`}
                   onClick={scrollToApplicationProcess}
                   role="button"
                   tabIndex={0}
                   onKeyPress={(e) => e.key === 'Enter' && scrollToApplicationProcess()}
                 >
-                  {residentStatus === 'open' ? 'STATUS: OPEN' : 'STATUS: CLOSED'}
+                  {residentStatus === 'closed' ? 'STATUS: CLOSED' : 'STATUS: OPEN'}
                 </div>
+                {residentStatus === 'closed' && <p className="mt-2">Until Further Notice</p>}
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 dark:bg-[#1e293b]">
                 <h3 className="text-xl font-bold mb-2">VISITING CONTROLLER</h3>
@@ -101,7 +102,7 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <div className="border-2 border-t w-12 border-blue-500 flex-grow ml-2"></div>
               </div>
               <strong className="mb-8 text-md font-semibold text-gray-600 dark:text-white">
-              READ BELOW CAREFULLY!.
+                READ BELOW CAREFULLY!.
               </strong>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col">
@@ -195,36 +196,42 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                   </p>
                   <div className="text-left">
                     <div className="text-md font-normal text-gray-600 dark:text-slate-400">
-                    <div className="text-md font-normal text-gray-600 dark:text-slate-400 mt-4">
-                      <strong className="dark:text-[#cbd5e1]">Step 1 - Submitting Your Application</strong>
-                      <ol className="list-decimal ml-5">
-                        <li>
-                          Go to the{' '}
-                          <a
-                            href="https://hq.vat-sea.com/support/create"
-                            className="underline text-primary-600 dark:text-primary-200 transition-colors duration-300 hover:text-primary-800 dark:hover:text-primary-400"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            IDvACC Support Portal
-                          </a>{' '}
-                          to create a ticket.
-                        </li>
-                        <li>
-                          Set the assigned staff to &quot;Indonesia vACC Staff&quot; and the subject to “Visiting Controller Application”
-                        </li>
-                        <li>
-                          In the description field, include:
-                          <ul className="list-disc ml-5 mt-2">
-                                <li>Are you familiar with Indonesian airspace?</li>
-                                <li>State your Home vACC</li>
-                                <li>Recommendation Letter from Home vACC is required and should be sent to <span className='text-gray-600 dark:dark:text-[#cbd5e1]'>training.idvacc@gmail.com</span> prior to submitting your application.</li>
-                              </ul>
-                            </li>
-                      </ol>
+                      <div className="text-md font-normal text-gray-600 dark:text-slate-400 mt-4">
+                        <strong className="dark:text-[#cbd5e1]">Step 1 - Submitting Your Application</strong>
+                        <ol className="list-decimal ml-5">
+                          <li>
+                            Go to the{' '}
+                            <a
+                              href="https://hq.vat-sea.com/support/create"
+                              className="underline text-primary-600 dark:text-primary-200 transition-colors duration-300 hover:text-primary-800 dark:hover:text-primary-400"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              IDvACC Support Portal
+                            </a>{' '}
+                            to create a ticket.
+                          </li>
+                          <li>
+                            Set the assigned staff to &quot;Indonesia vACC Staff&quot; and the subject to “Visiting
+                            Controller Application”
+                          </li>
+                          <li>
+                            In the description field, include:
+                            <ul className="list-disc ml-5 mt-2">
+                              <li>Are you familiar with Indonesian airspace?</li>
+                              <li>State your Home vACC</li>
+                              <li>
+                                Recommendation Letter from Home vACC is required and should be sent to{' '}
+                                <span className="text-gray-600 dark:dark:text-[#cbd5e1]">
+                                  training.idvacc@gmail.com
+                                </span>{' '}
+                                prior to submitting your application.
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
