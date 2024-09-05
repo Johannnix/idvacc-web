@@ -32,11 +32,11 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
           )}
           <p className="hidden text-base font-semibold mt-24 text-center tracking-wide text-primary-600 dark:text-primary-200 md:block">Maps</p>
           <h2 className="hidden leading-tighter font-heading font-bold tracking-tighter text-center md:text-3xl md:block">
-            Indonesia Map
+            Live Tracker & Indonesia Map
           </h2>
           <iframe
             className="hidden md:block m-auto max-w-5xl w-full h-96 mt-8 rounded-lg"
-            src="https://vatsim-radar.com/?preset=id"
+            src="https://vatsim-radar.com/?preset=id&airports=WIII,WADD,WITT,WAJJ,WIMM,WIEE,WIPP,WAHI,WAHQ,WAHS,WIOO,WAOO,WAAA,WAFF,WAEE,WAMM,WAMG,WAPP,WASS,WADL,WARR,WIBB,WIGG,WILL,WICA,WALL,WALS,WAYY,WATO,WATT,WIDD,WIKT,WAWW,WIJJ,WAFW,WAKK,WAQT"
           ></iframe>
         </div>
       </div>
