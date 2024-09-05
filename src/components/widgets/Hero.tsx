@@ -36,7 +36,7 @@ const Hero = ({ title, subtitle, tagline, callToAction, callToAction2, image }: 
           </h2>
           <iframe
             className="hidden md:block m-auto max-w-5xl w-full h-96 mt-8 rounded-lg"
-            src="https://vatsim-radar.com/?preset=id"
+            src="https://vatsim-radar.com/?preset=id&airports=WIII,WADD,WITT,WAJJ,WIMM,WIEE,WIPP,WAHI,WAHQ,WAHS,WIOO,WAOO,WAAA,WAFF,WAEE,WAMM,WAMG,WAPP,WASS,WADL,WARR,WIBB,WIGG,WILL,WICA,WALL,WALS,WAYY,WATO,WATT,WIDD,WIKT,WAWW,WIJJ,WAFW,WAKK,WAQT"
           ></iframe>
         </div>
       </div>
