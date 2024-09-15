@@ -7,7 +7,7 @@ type Status = 'open' | 'closed';
 
 const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
   const residentStatus: Status = 'closed'; // Change to 'closed' to test closed status
-  const visitorStatus: Status = 'open'; // Change to 'open' to test open status
+  const visitorStatus: Status = 'closed'; // Change to 'open' to test open status
 
   const applicationProcessRef = useRef<HTMLDivElement | null>(null);
 
@@ -62,16 +62,16 @@ const JoinUs: React.FC<JoinProps> = ({ id, hasBackground }) => {
                 <h3 className="text-xl font-bold mb-2">VISITING CONTROLLER</h3>
                 <div
                   className={`${
-                    visitorStatus === 'open' ? 'bg-green-500' : 'bg-red-500'
+                    visitorStatus === 'closed' ? 'bg-red-500' : 'bg-green-500'
                   } text-white rounded-lg px-4 py-2`}
                   onClick={scrollToApplicationProcess}
                   role="button"
                   tabIndex={0}
                   onKeyPress={(e) => e.key === 'Enter' && scrollToApplicationProcess()}
                 >
-                  {visitorStatus === 'open' ? 'STATUS: OPEN' : 'STATUS: CLOSED'}
+                  {visitorStatus === 'closed' ? 'STATUS: CLOSED' : 'STATUS: OPEN'}
                 </div>
-                {/* {visitorStatus === 'closed' && <p className="mt-2">Until Further Notice</p>} */}
+                {visitorStatus === 'closed' && <p className="mt-2">Until Further Notice</p>}
               </div>
             </div>
           </div>
